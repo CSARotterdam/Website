@@ -38,7 +38,7 @@
             return count($this -> menu_children) > 0;
         }
 
-        public function add_child(object $new_child) {
+        public function add_child(csar_navigation_menu_item $new_child) {
             $this -> menu_children[$new_child -> menu_id] = $new_child;
         }
     }
