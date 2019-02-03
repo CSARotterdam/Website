@@ -13,28 +13,11 @@
         $data = get_post_meta($post->ID);
         $functie = isset($data['lid_role_omschrijving_functie']) ? esc_attr($data['lid_role_omschrijving_functie'][0]) : '';
         $omschrijving = isset($data['lid_role_omschrijving_beschrijving']) ? esc_attr($data['lid_role_omschrijving_beschrijving'][0]) : '';
-        $functie_select = get_post_meta($post->ID, 'lid_role_omschrijving_functie_selected', true);
+//        $functie_select = get_post_meta($post->ID, 'lid_role_omschrijving_functie_selected', true);
 
         ?>
         <label for="lid_role_omschrijving_functie">Functie:</label><br>
         <input type='text' name='lid_role_omschrijving_functie' id='lid_role_omschrijving_functie' value='<?php echo $functie ?>' style='width: 100%' />
-
-        <label for="lid_role_omschrijving_functie_selected">Select Functie:</label><br>
-        <select name="lid_role_omschrijving_functie_selected" id="lid_role_omschrijving_functie_selected" class="postbox" style="width: 100%">
-            <option value="lid">Lid</option>
-            <option value="Voorzitter_bestuur" <?php echo selected($functie_select, 'Voorzitter_bestuur'); ?>>Voorzitter</option>
-            <option value="Secreteris_bestuur" <?php echo selected($functie_select, 'Secreteris_bestuur'); ?>>Secretaris</option>
-            <option value="Vice_Voorzitters_bestuur" <?php selected($functie_select, 'Vice_Voorzitters_bestuur'); ?>>Vice-voorzitter</option>
-            <option value="Penningmeester_bestuur" <?php selected($functie_select, 'Penningmeester_bestuur'); ?>>penningmeester</option>
-            <option value="Voorzitter_software" <?php selected($functie_select, 'Voorzitter_software'); ?>>Voorzitter software commissie</option>
-            <option value="Lid_software" <?php selected($functie_select, 'Lid_software'); ?>>Lid software commissie</option>
-            <option value="Voorzitter_activiteiten" <?php selected($functie_select, 'Voorzitter_activiteiten'); ?>>Voorzitter activiteiten commissie</option>
-            <option value="Lid_activiteiten" <?php selected($functie_select, 'Lid_activiteiten'); ?>>Lid activiteiten commissie</option>
-            <option value="Voorzitter_advies" <?php selected($functie_select, 'Voorzitter_advies'); ?>>Voorzitter advies en feedback commissie</option>
-            <option value="Lid_advies" <?php selected($functie_select, 'Lid_advies'); ?>>Lid advies en feedback commissie</option>
-            <option value="Voorzitter_promotie" <?php selected($functie_select, 'Voorzitter_promotie'); ?>>Voorzitter promotie commissie</option>
-            <option value="Lid_promotie" <?php selected($functie_select, 'Lid_promotie'); ?>>Lid promotie commissie</option>
-        </select>
 
         <label for="lid_role_omschrijving_beschrijving">Beschrijving: </label><br>
         <textarea type='text' name='lid_role_omschrijving_beschrijving' id='lid_role_omschrijving_beschrijving' rows='4' style='width: 100%'><?php echo $omschrijving ?></textarea>
@@ -58,9 +41,9 @@
         if (array_key_exists('lid_role_omschrijving_functie', $_POST)) {
             update_post_meta($post->ID, "lid_role_omschrijving_functie", $_POST["lid_role_omschrijving_functie"]);
         }
-        if (array_key_exists('lid_role_omschrijving_functie_selected', $_POST)) {
-            update_post_meta($post->ID, "lid_role_omschrijving_functie_selected", $_POST["lid_role_omschrijving_functie_selected"]);
-        }
+//        if (array_key_exists('lid_role_omschrijving_functie_selected', $_POST)) {
+//            update_post_meta($post->ID, "lid_role_omschrijving_functie_selected", $_POST["lid_role_omschrijving_functie_selected"]);
+//        }
         if (array_key_exists('lid_role_omschrijving_beschrijving', $_POST)) {
             update_post_meta($post->ID, "lid_role_omschrijving_beschrijving", $_POST["lid_role_omschrijving_beschrijving"]);
         }
@@ -81,31 +64,31 @@
     function lid_social_html($post)
     {
         $data = get_post_meta($post->ID);
-        $LinkedIn = isset($data['lid_social_LinkedIn']) ? esc_attr($data['lid_social_LinkedIn'][0]) : '';
+//        $LinkedIn = isset($data['lid_social_LinkedIn']) ? esc_attr($data['lid_social_LinkedIn'][0]) : '';
         $email = isset($data['lid_social_E_mail']) ? esc_attr($data['lid_social_E_mail'][0]) : '';
-        $github = isset($data['lid_social_Github']) ? esc_attr($data['lid_social_Github'][0]) : '';
-        $Discord = isset($data['lid_social_Discord']) ? esc_attr($data['lid_social_Discord'][0]) : '';
-        $Facebook = isset($data['lid_social_Facebook']) ? esc_attr($data['lid_social_Facebook'][0]) : '';
-        $Twitter = isset($data['lid_social_Twitter']) ? esc_attr($data['lid_social_Twitter'][0]) : '';
+//        $github = isset($data['lid_social_Github']) ? esc_attr($data['lid_social_Github'][0]) : '';
+//        $Discord = isset($data['lid_social_Discord']) ? esc_attr($data['lid_social_Discord'][0]) : '';
+//        $Facebook = isset($data['lid_social_Facebook']) ? esc_attr($data['lid_social_Facebook'][0]) : '';
+//        $Twitter = isset($data['lid_social_Twitter']) ? esc_attr($data['lid_social_Twitter'][0]) : '';
 
         ?>
-    <label for="lid_social_LinkedIn">LinkedIn:</label><br>
-    <input type='text' name='lid_social_LinkedIn' id='lid_social_LinkedIn' value='<?php echo $LinkedIn ?>' style='width: 100%' />
+<!--    <label for="lid_social_LinkedIn">LinkedIn:</label><br>-->
+<!--    <input type='text' name='lid_social_LinkedIn' id='lid_social_LinkedIn' value='--><?php //echo $LinkedIn ?><!--' style='width: 100%' />-->
 
     <label for="lid_social_E_mail">E-mail: </label><br>
     <input type='email' name='lid_social_E_mail' id='lid_social_E_mail' value="<?php echo $email ?>" style='width: 100%' />
 
-    <label for="lid_social_Github">Github: </label><br>
-    <input type='text' name="lid_social_Github" id="lid_social_Github" value="<?php echo $github ?>" style="width: 100%" />
-
-    <label for="lid_social_Discord">Discord: </label><br>
-    <input type='text' name="lid_social_Discord" id="lid_social_Discord" value="<?php echo $Discord ?>" style="width: 100%" />
-
-    <label for="lid_social_Facebook">Facebook: </label><br>
-    <input type='text' name="lid_social_Facebook" id="lid_social_Facebook" value="<?php echo $Facebook ?>" style="width: 100%" />
-
-    <label for="lid_social_Twitter">Twitter: </label><br>
-    <input type='text' name="lid_social_Twitter" id="lid_social_Twitter" value="<?php echo $Twitter ?>" style="width: 100%" />
+<!--    <label for="lid_social_Github">Github: </label><br>-->
+<!--    <input type='text' name="lid_social_Github" id="lid_social_Github" value="--><?php //echo $github ?><!--" style="width: 100%" />-->
+<!---->
+<!--    <label for="lid_social_Discord">Discord: </label><br>-->
+<!--    <input type='text' name="lid_social_Discord" id="lid_social_Discord" value="--><?php //echo $Discord ?><!--" style="width: 100%" />-->
+<!---->
+<!--    <label for="lid_social_Facebook">Facebook: </label><br>-->
+<!--    <input type='text' name="lid_social_Facebook" id="lid_social_Facebook" value="--><?php //echo $Facebook ?><!--" style="width: 100%" />-->
+<!---->
+<!--    <label for="lid_social_Twitter">Twitter: </label><br>-->
+<!--    <input type='text' name="lid_social_Twitter" id="lid_social_Twitter" value="--><?php //echo $Twitter ?><!--" style="width: 100%" />-->
     <?php
 
     }
@@ -118,33 +101,37 @@
     {
         global $post;
 
-        if (array_key_exists('lid_social_LinkedIn', $_POST) &&
-            array_key_exists('lid_social_E_mail', $_POST) &&
-            array_key_exists('lid_social_Github', $_POST) &&
-            array_key_exists('lid_social_Discord', $_POST) &&
-            array_key_exists('lid_social_Facebook', $_POST) &&
-            array_key_exists('lid_social_Twitter', $_POST) &&
-            define('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-            return $post->ID;
-        }
-        if (array_key_exists('lid_social_LinkedIn', $_POST)) {
-            update_post_meta($post->ID, "lid_social_LinkedIn", $_POST["lid_social_LinkedIn"]);
-        }
+//        if (array_key_exists('lid_social_LinkedIn', $_POST) &&
+//            array_key_exists('lid_social_E_mail', $_POST) &&
+//            array_key_exists('lid_social_Github', $_POST) &&
+//            array_key_exists('lid_social_Discord', $_POST) &&
+//            array_key_exists('lid_social_Facebook', $_POST) &&
+//            array_key_exists('lid_social_Twitter', $_POST) &&
+//            define('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+//            return $post->ID;
+//        }
+	    if (array_key_exists('lid_social_E_mail', $_POST) &&
+	        define('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+		    return $post->ID;
+	    }
+//        if (array_key_exists('lid_social_LinkedIn', $_POST)) {
+//            update_post_meta($post->ID, "lid_social_LinkedIn", $_POST["lid_social_LinkedIn"]);
+//        }
         if (array_key_exists('lid_social_E_mail', $_POST)) {
             update_post_meta($post->ID, "lid_social_E_mail", $_POST["lid_social_E_mail"]);
         }
-        if (array_key_exists('lid_social_Github', $_POST)) {
-            update_post_meta($post->ID, "lid_social_Github", $_POST["lid_social_Github"]);
-        }
-        if (array_key_exists('lid_social_Discord', $_POST)) {
-            update_post_meta($post->ID, "lid_social_Discord", $_POST["lid_social_Discord"]);
-        }
-        if (array_key_exists('lid_social_Facebook', $_POST)) {
-            update_post_meta($post->ID, "lid_social_Facebook", $_POST["lid_social_Facebook"]);
-        }
-        if (array_key_exists('lid_social_Twitter', $_POST)) {
-            update_post_meta($post->ID, "lid_social_Twitter", $_POST["lid_social_Twitter"]);
-        }
+//        if (array_key_exists('lid_social_Github', $_POST)) {
+//            update_post_meta($post->ID, "lid_social_Github", $_POST["lid_social_Github"]);
+//        }
+//        if (array_key_exists('lid_social_Discord', $_POST)) {
+//            update_post_meta($post->ID, "lid_social_Discord", $_POST["lid_social_Discord"]);
+//        }
+//        if (array_key_exists('lid_social_Facebook', $_POST)) {
+//            update_post_meta($post->ID, "lid_social_Facebook", $_POST["lid_social_Facebook"]);
+//        }
+//        if (array_key_exists('lid_social_Twitter', $_POST)) {
+//            update_post_meta($post->ID, "lid_social_Twitter", $_POST["lid_social_Twitter"]);
+//        }
     }
 
     // Add the function that save the post of locatie events
@@ -179,7 +166,7 @@
     }
 
     // Add the function that create meta box
-    add_action('add_meta_boxes', 'lid_add_account');
+//    add_action('add_meta_boxes', 'lid_add_account');
 
     function lid_account_postdata()
     {
@@ -196,4 +183,4 @@
     }
 
     // Add the function that save the post of locatie events
-    add_action('save_post', 'lid_account_postdata');
+//    add_action('save_post', 'lid_account_postdata');

@@ -31,22 +31,6 @@
 
                 <div class="col-12 col-md-6">
                     <?php gravity_form("Contact", true, false) ?>
-
-                    <!-- <form>
-                        <label for="contactName">Naam</label>
-                        <input class="form-control form-text" type="text" name="contactName" id="contactName" placeholder="Naam"/>
-
-                        <label for="contactMail">Mail</label>
-                        <input class="form-control form-text" type="email" name="contactMail" id="contactMail" placeholder="voor@beeld.nl" />
-
-                        <label for="contactSubject">Onderwerp</label>
-                        <input class="form-control form-text" type="text" name="contactSubject" id="contactSubject" placeholder="Onderwerp"/>
-
-                        <label for="contactMessage">Bericht</label>
-                        <textarea class="form-control form-text" name="contactMessage" id="contactMessage" placeholder="Bericht" rows="5"></textarea>
-
-                        <button class="btn btn-primary full-size-button" type="button" name="contactSend" value="send">Versturen</button>
-                    </form> -->
                 </div> <!-- col-12 col-md-6 -->
             </div> <!-- row -->    
         </div> <!-- container -->

@@ -93,12 +93,12 @@
                                 if (!empty($posts)) {
                                     foreach ($posts as $post) {
 
-                                            ?>  <a class="container" href="newsarticle.html" title="news">
+                                            ?>  <a class="container" href="<?php echo get_permalink( $post ); ?>" title="<?php echo get_the_title( $post ); ?>">
                                                     <div class="row newsarticle">
                                                         <?php
                                                             if(get_the_post_thumbnail_url($post -> ID)) { ?>
                                                                 <div class="col-12 col-md-3 img-center">
-                                                                    <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($post -> ID); ?>" alt="Image" title="Image"/>
+                                                                    <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($post -> ID); ?>" alt="<?php echo get_the_title( $post ); ?>" title="<?php echo get_the_title( $post ); ?>"/>
                                                                     <div class="list-spacer d-block d-md-none"></div>
                                                                     </div>
                                                         <?php } ?>
@@ -139,7 +139,7 @@
                                 if (!empty($posts)) {
                                     foreach ($posts as $post) {
 
-                                            ?>  <a class="container" href="newsarticle.html" title="news">
+                                            ?>  <a class="container" href="<?php echo get_permalink( $post ); ?>" title="news">
                                                     <div class="row newsarticle">
                                                         <?php
                                                             if(get_the_post_thumbnail_url($post -> ID)) { ?>

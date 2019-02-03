@@ -47,8 +47,8 @@ function event_begindatum_html($post)
     $datum = isset($data['event_begindatum_date']) ? esc_attr($data['event_begindatum_date'][0]) : "";
     $time = isset($data['event_begindatum_time']) ? esc_attr($data['event_begindatum_time'][0]) : "";
 
-    echo "<input type='date' name='event_begindatum_date' id='event_begindatum_date' value='$datum' style='width: 100%' />";
-    echo "<input type='time' name='event_begindatum_time' id='event_begindatum_time' value='$time' style='width: 100%' />";
+    echo "Datum <input type='date' name='event_begindatum_date' id='event_begindatum_date' value='$datum' style='width: 100%' />";
+    echo "Tijd <input type='time' name='event_begindatum_time' id='event_begindatum_time' value='$time' style='width: 100%' />";
 }
 
   // Add the function that create meta box
@@ -85,8 +85,8 @@ function event_einddatum_html($post)
     $datum = isset($data['event_einddatum_date']) ? esc_attr($data['event_einddatum_date'][0]) : "";
     $time = isset($data['event_einddatum_time']) ? esc_attr($data['event_einddatum_time'][0]) : "";
 
-    echo "<input type='date' name='event_einddatum_date' id='event_einddatum_date' value='$datum' style='width: 100%' />";
-    echo "<input type='time' name='event_einddatum_time' id='event_einddatum_time' value='$time' style='width: 100%' />";
+    echo "Datum <input type='date' name='event_einddatum_date' id='event_einddatum_date' value='$datum' style='width: 100%' />";
+    echo "Tijd <input type='time' name='event_einddatum_time' id='event_einddatum_time' value='$time' style='width: 100%' />";
 }
 
 // Add the function that create meta box

@@ -145,6 +145,10 @@ h2 {
     padding-bottom: 3em;
 }
 
+.smaller-title {
+    margin-bottom: 0.1em;
+}
+
 .sub-header {
     margin-top: 0;
 }
