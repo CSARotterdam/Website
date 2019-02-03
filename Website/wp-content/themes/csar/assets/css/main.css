@@ -1,0 +1,157 @@
+a .newsarticle, 
+a .event, 
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.bg-dark .container {
+    color: white;
+}
+
+footer .bg-light .container,
+footer .bg-dark .container  {
+    padding-top: 2em;
+    padding-bottom: 1em !important;
+}
+
+.bg-dark .newsarticle:hover,
+.bg-dark .event:hover {
+    background-color: #000022;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.breadcrumb a {
+    color: #6c757d;
+}
+
+.breadcrumb a:hover {
+    color: #4A4A4A;
+}
+
+.centered-header {
+    text-align: center;
+}
+
+.content-container {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.content-justify {
+    text-align: justify;
+}
+
+.copyright {
+    margin-top: 3em;
+}
+
+.dark-background-list a {
+    color: white;    
+}
+
+.dark-background-list a:hover {
+    color: grey;    
+    text-decoration: none;
+}
+
+.extra-space {
+    margin-bottom: 2em;
+}
+
+.form-text,
+.card {
+    margin-bottom: 1em;
+}
+
+.full-size-button {
+    width: 100%;
+}
+
+.img-center {
+    text-align: center;
+}
+
+.inner-context {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
+.light-background-list a {
+    color: black;    
+}
+
+.light-background-list a:hover {
+    color: grey;    
+    text-decoration: none;
+}
+
+.list-spacer,
+.news-list-container {
+    margin-top: 1em;
+}
+
+.little-news-box:hover,
+.little-event-box:hover,
+.little-commission-box:hover {
+    background: #DDDDDD;
+}
+
+#map {
+    height: 500px;
+}
+
+.navbar,
+.newsarticle,
+.event {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.newsarticle p,
+.event p {
+    margin-bottom: 0;
+}
+
+.news-list-container a,
+.events-list-container a {
+    color: black;
+}
+
+.news-list-container a:hover,
+.events-list-container a:hover  {
+    color: black;
+}
+
+.no-style-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.page-title {
+    margin: 25px;
+}
+
+.partial-content-container {
+    padding-bottom: 3em;
+}
+
+.sub-header {
+    margin-top: 0;
+}
+
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 1em;
+    color: #6c757d;
+}

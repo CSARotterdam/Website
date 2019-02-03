@@ -1,0 +1,26 @@
+/*
+Theme Name: CSAR - Computer Science Association Rotterdam
+Theme URI: http://www.csarotterdam.nl/
+Author: CSPConnections
+Author URI: http://www.cspconnections.nl/
+Description: Het Thema voor de studievereniging Informatica van de Hogeschool Rotterdam
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: csar
+Text Domain: csar-theme
+*/
+
+.gform_button {
+    background-color: #286090;
+    border: 1px solid #204d74;
+    width: 100% !important;
+    height: 3em;
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 641px) {
+    .gform_footer {
+        padding-right: 16px !important;
+    }
+}

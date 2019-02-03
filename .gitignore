@@ -1,0 +1,12 @@
+# Folders
+.idea/
+wp-admin/
+wp-includes/
+Website/wp-content/languages/
+
+# WordPress Base Files
+Website/*
+!Website/wp-content/
+
+# Other files
+.DS_Store
