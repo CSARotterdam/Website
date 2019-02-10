@@ -2,7 +2,7 @@
 
 <main>
     <?php if (get_the_post_thumbnail_url($post -> ID)): ?>
-        <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($post -> ID); ?>" title="<?php echo $post -> post_title; ?>" alt="<?php echo $post -> post_title; ?>">
+        <img class="img-fluid header-image" src="<?php echo get_the_post_thumbnail_url($post -> ID); ?>" title="<?php echo $post -> post_title; ?>" alt="<?php echo $post -> post_title; ?>">
     <?php endif; ?>
 
     <div class="bg-light">

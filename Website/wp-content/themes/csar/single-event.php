@@ -2,14 +2,13 @@
 
 	<main>
 		<?php if (get_the_post_thumbnail_url($post -> ID)): ?>
-			<img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($post -> ID); ?>" title="<?php echo $post -> post_title; ?>" alt="<?php echo $post -> post_title; ?>">
+			<img class="img-fluid header-image" src="<?php echo get_the_post_thumbnail_url($post -> ID); ?>" title="<?php echo $post -> post_title; ?>" alt="<?php echo $post -> post_title; ?>">
 		<?php endif; ?>
 
 		<div class="bg-light">
 			<div class="container content-container">
 				<div class="row">
 					<div class="col-12">
-						<h3 class="subtitle centered-header"><?php echo get_the_author_meta('display_name', $post -> post_author); ?> | <?php echo get_the_date("j F Y", $post); ?></h3>
 						<h1 class="centered-header page-title sub-header"><?php echo get_the_title($post -> ID); ?></h1>
 					</div>
 

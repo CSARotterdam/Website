@@ -28,10 +28,10 @@
                         ?>  <div class="carousel-item <?php echo $count == 1 ? 'active' : ''; ?>">
                                 <a href="<?php echo get_post_meta($post -> ID, 'image_url_id', true) ? get_post_meta($post -> ID, 'image_url_id', true) : '#'; ?>" title="<?php echo $post -> post_title ?>" alt="<?php echo $post -> post_title ?>">
                                     <img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url($post -> ID); ?>" alt="Slide" title="Slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5><?php echo $post -> post_title; ?></h5>
-                                        <p><?php echo get_post_meta($post -> ID, 'image_subtitle', true); ?></p>
-                                    </div>
+<!--                                    <div class="carousel-caption d-none d-md-block">-->
+<!--                                        <h5>--><?php //echo $post -> post_title; ?><!--</h5>-->
+<!--                                        <p>--><?php //echo get_post_meta($post -> ID, 'image_subtitle', true); ?><!--</p>-->
+<!--                                    </div>-->
                                 </a>
                             </div>
                     <?php }
